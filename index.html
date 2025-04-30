@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Universidad Americana (UAM)</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            techno: ['Orbitron', 'sans-serif'],
+          },
+          animation: {
+            'bg-pan': 'bg-pan 10s linear infinite'
+          },
+          keyframes: {
+            'bg-pan': {
+              '0%': { backgroundPosition: '0% 50%' },
+              '50%': { backgroundPosition: '100% 50%' },
+              '100%': { backgroundPosition: '0% 50%' },
+            }
+          },
+          backgroundImage: {
+            'neon-gradient': 'linear-gradient(270deg, #0fffc1, #8a2be2, #00ffff)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Fuente Orbitron de Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- JS del carrusel -->
+  <script defer src="index-script.js"></script>
+</head>
+
+<body class="min-h-screen text-white font-techno bg-[length:400%_400%] bg-neon-gradient animate-bg-pan">
+
+  <!-- Header -->
+  <header class="bg-black bg-opacity-70 py-6 shadow-lg text-center">
+    <h1 class="text-4xl font-bold tracking-widest text-cyan-300">Universidad Americana (UAM)</h1>
+  </header>
+
+  <!-- Navbar -->
+  <nav class="bg-black bg-opacity-70 py-3 flex justify-center space-x-10 text-lg">
+    <a href="#" class="hover:text-cyan-400 transition">Inicio</a>
+    <a href="#" class="hover:text-purple-400 transition">Conferencias</a>
+    <a href="#" class="hover:text-green-400 transition">Registro</a>
+  </nav>
+
+  <!-- Contenido principal -->
+  <main class="max-w-6xl mx-auto px-6 mt-10 space-y-16">
+
+    <!-- Sección de Cards -->
+    <section class="grid md:grid-cols-3 gap-6">
+      <div class="bg-black bg-opacity-60 p-6 rounded-lg border border-cyan-400 shadow-xl hover:scale-105 transition duration-300">
+        <h2 class="text-xl font-bold text-cyan-300 mb-2">Misión</h2>
+        <p class="text-sm">Formar líderes con visión global, emprendedores, con sólidos conocimientos científicos y principios humanísticos, capaces de aprender permanentemente para hacer frente a los desafíos de la sociedad contemporánea.</p>
+      </div>
+
+      <div class="bg-black bg-opacity-60 p-6 rounded-lg border border-green-400 shadow-xl hover:scale-105 transition duration-300">
+        <h2 class="text-xl font-bold text-green-300 mb-2">Visión</h2>
+        <p class="text-sm">La Universidad Americana, va en busca de la innovación y la creatividad en el ámbito educativo, promoviendo entre su estudiantado y profesores los valores de responsabilidad y respeto, basándose en la ética profesional y la integridad como profesionales.</p>
+      </div>
+
+      <div class="bg-black bg-opacity-60 p-6 rounded-lg border border-purple-400 shadow-xl hover:scale-105 transition duration-300">
+        <h2 class="text-xl font-bold text-purple-300 mb-2">Descripción</h2>
+        <p class="text-sm">La UAM es una institución dedicada a la formación integral de sus estudiantes, promoviendo el desarrollo académico y profesional con enfoque moderno.</p>
+      </div>
+    </section>
+
+    <!-- Carrusel -->
+    <section>
+        <h2 class="text-2xl text-center text-cyan-200 font-bold mb-6">Excelencia académica</h2>
+        <div class="relative w-full max-w-4xl mx-auto overflow-hidden rounded-xl shadow-xl border border-cyan-400">
+          <img id="carousel-image" src="img1.jpg" alt="Imagen Universidad" class="w-full h-[500px] object-cover transition duration-500">
+          <button onclick="prevImage()" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black bg-opacity-70 text-white px-3 py-1 rounded-full hover:bg-opacity-90">&larr;</button>
+          <button onclick="nextImage()" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black bg-opacity-70 text-white px-3 py-1 rounded-full hover:bg-opacity-90">&rarr;</button>
+        </div>
+      </section>
+      
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-black bg-opacity-70 text-center py-6 mt-20 border-t border-cyan-500">
+    <p class="text-sm text-cyan-300 font-semibold">Facultad de Ingeniería y Arquitectura - Universidad Americana (UAM)</p>
+    <p class="text-xs mt-1">© 2025 Universidad Americana. Desarrollado por estudiantes de Ingeniería en Software.</p>
+  </footer>
+
+</body>
+</html>
