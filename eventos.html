@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eventos UAM</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            techno: ['Orbitron', 'sans-serif'],
+          },
+          animation: {
+            'bg-pan': 'bg-pan 12s linear infinite',
+          },
+          keyframes: {
+            'bg-pan': {
+              '0%': { backgroundPosition: '0% 50%' },
+              '50%': { backgroundPosition: '100% 50%' },
+              '100%': { backgroundPosition: '0% 50%' },
+            }
+          },
+          backgroundImage: {
+            'neon-gradient': 'linear-gradient(270deg, #0fffc1, #8a2be2, #00ffff)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Fuente Orbitron -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body class="min-h-screen text-white font-techno bg-[length:400%_400%] bg-neon-gradient animate-bg-pan">
+
+  <!-- Header -->
+  <header class="bg-black bg-opacity-70 py-6 text-center shadow-lg">
+    <h1 class="text-4xl font-bold tracking-widest text-green-300">Eventos Tecnológicos - UAM</h1>
+  </header>
+
+  <!-- Navbar -->
+  <nav class="bg-black bg-opacity-70 py-3 flex justify-center space-x-10 text-lg">
+    <a href="index.html" class="hover:text-cyan-400 transition">Inicio</a>
+    <a href="eventos.html" class="hover:text-purple-400 transition">Eventos</a>
+    <a href="#" class="hover:text-pink-400 transition">Registro</a>
+  </nav>
+
+  <!-- Contenido principal -->
+  <main class="max-w-6xl mx-auto px-6 mt-16 space-y-12">
+
+    <h2 class="text-3xl font-bold text-center text-green-300 mb-6">Conferencias Tecnológicas</h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <!-- Evento 1 - GitHub -->
+      <div class="bg-black bg-opacity-60 p-6 rounded-lg border border-cyan-400 shadow-xl hover:scale-105 transition duration-300">
+        <h3 class="text-lg font-bold text-cyan-300 mb-2">🐙 Uso de GitHub en proyectos colaborativos</h3>
+        <p class="text-base mb-4">Aprende cómo gestionar versiones, ramas y colaboraciones efectivas usando GitHub en equipos reales de desarrollo.</p>
+        <p class="text-sm"><span class="font-semibold text-cyan-200">Fecha:</span> 10 de mayo, 2025</p>
+        <p class="text-sm"><span class="font-semibold text-cyan-200">Hora:</span> 9:00 AM - 11:00 AM</p>
+      </div>
+
+      <!-- Evento 2 - Docker -->
+      <div class="bg-black bg-opacity-60 p-6 rounded-lg border border-purple-400 shadow-xl hover:scale-105 transition duration-300">
+        <h3 class="text-lg font-bold text-purple-300 mb-2">🐳 Introducción a Docker para entornos de desarrollo</h3>
+        <p class="text-base mb-4">Descubre cómo Docker puede simplificar la configuración de entornos reproducibles para desarrollo y pruebas.</p>
+        <p class="text-sm"><span class="font-semibold text-purple-200">Fecha:</span> 12 de mayo, 2025</p>
+        <p class="text-sm"><span class="font-semibold text-purple-200">Hora:</span> 2:00 PM - 4:00 PM</p>
+      </div>
+
+      <!-- Evento 3 - Linux -->
+      <div class="bg-black bg-opacity-60 p-6 rounded-lg border border-green-400 shadow-xl hover:scale-105 transition duration-300">
+        <h3 class="text-lg font-bold text-green-300 mb-2">🐧 Configuración básica de servidores Linux</h3>
+        <p class="text-base mb-4">Conoce los fundamentos para instalar, configurar y asegurar servidores Linux como base para entornos de producción.</p>
+        <p class="text-sm"><span class="font-semibold text-green-200">Fecha:</span> 15 de mayo, 2025</p>
+        <p class="text-sm"><span class="font-semibold text-green-200">Hora:</span> 10:00 AM - 12:00 PM</p>
+      </div>
+
+    </div>
+    
+    <section class="mt-24 mb-16 text-center">
+    <h2 class="text-3xl font-bold text-pink-300 mb-6 animate-pulse">¡No te lo pierdas!</h2>
+  
+    <div class="flex justify-center items-center gap-6 flex-col md:flex-row">
+      <a href="registro.html" class="relative inline-block px-8 py-3 font-bold text-cyan-300 border-2 border-cyan-400 rounded-lg tracking-wider
+        hover:bg-cyan-400 hover:text-black transition-all duration-300 shadow-lg hover:shadow-cyan-300/50 animate-bounce">
+        Registrarse 🚀
+      </a>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-black bg-opacity-70 text-center py-6 mt-20 border-t border-cyan-500">
+    <p class="text-sm text-cyan-300 font-semibold">Facultad de Ingeniería y Arquitectura - Universidad Americana (UAM)</p>
+    <p class="text-xs mt-1">© 2025 Universidad Americana. Desarrollado por estudiantes de Ingeniería en Software.</p>
+  </footer>
+
+</body>
+</html>
