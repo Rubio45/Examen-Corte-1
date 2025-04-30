@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registro | Conferencias UAM</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            techno: ['Orbitron', 'sans-serif'],
+          },
+          animation: {
+            'bg-pan': 'bg-pan 12s linear infinite',
+          },
+          keyframes: {
+            'bg-pan': {
+              '0%': { backgroundPosition: '0% 50%' },
+              '50%': { backgroundPosition: '100% 50%' },
+              '100%': { backgroundPosition: '0% 50%' },
+            }
+          },
+          backgroundImage: {
+            'neon-gradient': 'linear-gradient(270deg, #0fffc1, #8a2be2, #00ffff)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
+  <script defer src="registro-script.js"></script>
+</head>
+
+<body class="min-h-screen text-white font-techno bg-[length:400%_400%] bg-neon-gradient animate-bg-pan">
+
+  <!-- Header -->
+  <header class="bg-black bg-opacity-70 py-6 text-center shadow-lg">
+    <h1 class="text-3xl font-bold tracking-widest text-cyan-300">Registro de Conferencias</h1>
+    <p class="text-sm text-cyan-100 mt-2">Facultad de Ingeniería y Arquitectura | Ingeniería en Sistemas de Información</p>
+  </header>
+
+  <!-- Navbar -->
+  <nav class="bg-black bg-opacity-70 py-3 flex justify-center space-x-10 text-lg">
+    <a href="index.html" class="hover:text-cyan-400 transition">Inicio</a>
+    <a href="eventos.html" class="hover:text-purple-400 transition">Eventos</a>
+    <a href="registro.html" class="hover:text-pink-400 transition">Registro</a>
+  </nav>
+
+  <!-- Formulario -->
+  <main class="max-w-3xl mx-auto mt-12 mb-20 px-6">
+    <form id="registroForm" class="bg-black bg-opacity-60 p-8 rounded-xl shadow-lg border border-cyan-400 space-y-6">
+      <h2 class="text-2xl font-bold text-center text-green-300 mb-4">Formulario de Inscripción</h2>
+
+      <div>
+        <label for="nombre" class="block text-sm mb-1">Nombre completo *</label>
+        <input type="text" id="nombre" name="nombre" class="w-full px-4 py-2 rounded bg-gray-900 text-white border border-cyan-300 focus:outline-none focus:ring-2 focus:ring-cyan-500" required>
+      </div>
+
+      <div>
+        <label for="correo" class="block text-sm mb-1">Correo institucional *</label>
+        <input type="email" id="correo" name="correo" pattern="^[a-zA-Z0-9._%+-]+@uam\.edu\.ni$" class="w-full px-4 py-2 rounded bg-gray-900 text-white border border-cyan-300 focus:outline-none focus:ring-2 focus:ring-cyan-500" required>
+        <small class="text-xs text-pink-300">Debe ser tu correo @uamv.edu.ni</small>
+      </div>
+
+      <div>
+        <label for="carrera" class="block text-sm mb-1">Carrera *</label>
+        <input type="text" id="carrera" name="carrera" class="w-full px-4 py-2 rounded bg-gray-900 text-white border border-cyan-300 focus:outline-none focus:ring-2 focus:ring-cyan-500" required>
+      </div>
+
+      <div>
+        <label class="block text-sm mb-2">Conferencias *</label>
+        <div class="space-y-2">
+          <label class="flex items-center">
+            <input type="checkbox" name="conferencias" value="GitHub" class="mr-2 accent-cyan-500"> Uso de GitHub
+          </label>
+          <label class="flex items-center">
+            <input type="checkbox" name="conferencias" value="Docker" class="mr-2 accent-purple-500"> Introducción a Docker
+          </label>
+          <label class="flex items-center">
+            <input type="checkbox" name="conferencias" value="Linux" class="mr-2 accent-green-500"> Servidores Linux
+          </label>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <button type="submit" class="px-8 py-3 bg-cyan-500 hover:bg-cyan-400 text-black font-bold rounded-full shadow-lg transition animate-bounce">Enviar Registro</button>
+      </div>
+
+      <div id="mensajeExito" class="hidden text-center text-green-300 font-semibold mt-4">¡Registro enviado correctamente!</div>
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-black bg-opacity-70 text-center py-6 border-t border-cyan-500">
+    <p class="text-sm text-cyan-300 font-semibold">Facultad de Ingeniería y Arquitectura - Universidad Americana (UAM)</p>
+    <p class="text-xs mt-1">© 2025 Universidad Americana. Desarrollado por Alex Diaz.</p>
+  </footer>
+</body>
+</html>
